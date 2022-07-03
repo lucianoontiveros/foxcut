@@ -30,8 +30,8 @@ const registerUser = async (req, res) => {
 
         // enviar correo electrónico con la confirmación de la cuenta
         const transport = nodemailer.createTransport({
-            host: "mail.ignaciogutierrez.cl",
-            port: 465,
+            host: "smtp.mailtrap.io",
+            port: 2525,
             secure: true,
             auth: {
                 user: process.env.USERMAIL,
