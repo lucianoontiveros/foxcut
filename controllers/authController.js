@@ -43,9 +43,7 @@ const registerUser = async (req, res) => {
             from: '"🙌" twitch@ignaciogutierrez.cl', // sender address
             to: user.email, // list of receivers
             subject: "Verifica tu cuenta de correo", // Subject line
-            html: `<a href="${
-                process.env.PATHHEROKU
-            }auth/confirmar/${user.tokenConfirm}">Verifica tu cuenta aquí</a>`, // html body
+            html: `<a href="https://foxcut.herokuapp.com/auth/confirmar/${user.tokenConfirm}">Verifica tu cuenta aquí</a>`, // html body
         });
 
         req.flash("mensajes", [
