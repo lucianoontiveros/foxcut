@@ -17,7 +17,7 @@ const registerUser = async (req, res) => {
     if (!errors.isEmpty()) {
         // return res.json(errors);
         req.flash("mensajes", errors.array());
-        return res.redirect("/auth/register");
+        return res.redirect("/");
     }
 
     const { userName, email, password } = req.body;
