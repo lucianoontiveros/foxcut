@@ -32,7 +32,6 @@ const registerUser = async (req, res) => {
         const transport = nodemailer.createTransport({
             host: "smtp.mailtrap.io",
             port: 2525,
-            secure: true,
             auth: {
                 user: process.env.USERMAIL,
                 pass: process.env.PASSEMAIL,
